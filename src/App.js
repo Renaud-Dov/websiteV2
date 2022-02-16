@@ -9,15 +9,9 @@ import {MainPage} from "./components/MainPage";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App selection:bg-green-500 selection:text-white">
         <Header/>
-        {/*<MainPage/>*/}
         <Me/>
-        {/*<Welcome/>*/}
-
-        toto
-      {/*<Me age="6" name="Dov"/>*/}
-      {/*<Projects/>*/}
     </div>
   );
 }
