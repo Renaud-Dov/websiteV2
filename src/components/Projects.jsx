@@ -5,7 +5,7 @@ import websiteIcon from "../website.jpg";
 
 const list = [
     {
-        name: 'opticalloop',
+        name: 'Opticalloop OCR',
         description: 'Opticalloop is OCR application made in C to recognise and solve sudokus.',
         picture: 'https://opticalloop.bugbear.fr/picture/our_project.gif',
         link: 'https://opticalloop.bugbear.fr/'
@@ -18,13 +18,13 @@ const list = [
     },
     {
         name: "CheckStudents",
-        description: "CheckStudent is Python Discord bot to take the attendance in class used in several servers around the world.",
+        description: "CheckStudent is Discord bot written in Python to take the attendance in class used in several servers around the world.",
         picture: checkstudents,
         link: "https://github.com/Renaud-Dov/CheckStudents",
     },
     {
         name: 'First Portfolio',
-        description: 'My first personal Portfolio, made with bootstrap.',
+        description: 'My first personal Portfolio, made with bootstrap, and few other libraries.',
         picture: websiteIcon,
         link: 'https://me.bugbear.fr/'
     },
@@ -58,20 +58,20 @@ class ProjectItem extends Component {
             bg = <div className={"w-full h-full bg-green-500"}/>
         }
         return (
-            <div className="relative h-28 hover:h-40 duration-200" onMouseEnter={this.handleHover}
+            <div className="relative h-28 hover:h-48 duration-200" onMouseEnter={this.handleHover}
                  onMouseLeave={this.handleHover}>
                 {bg}
                 <div
                     className={"absolute object-fill w-full h-full inset-y-0 text-white font-bold text-xl text-left transition-all"}>
-                    <div className="flex flex-wrap flex-row gap-10 p-5 justify-center">
+                    <div className="flex flex-wrap flex-row gap-10 p-5 justify-center content-center">
                         <div
-                            className={"absolute object-fill w-full h-full visible duration-200 inset-y-0 pl-4 pt-2 text-white font-light text-4xl text-left transition-all"}>
+                            className={"absolute object-fill hover:underline hover:decoration-1 w-full h-full visible duration-200 inset-y-0 pl-4 pt-2 text-white font-light text-4xl text-left transition-all"}>
                             {this.props.item.name}
                         </div>
                         <div className={(this.state.isHovered ? 'visible ' : 'invisible ') + "pt-8"}>
                             <p>{this.props.item.description}</p>
                             <button ref={this.props.item.link}>
-                                Check this out <i className="fa-solid  z-1 fa-arrow-up-right-from-square px-1 fa-lg"/>
+                                Check this out <i className="fa-solid  z-10 fa-arrow-up-right-from-square px-1 fa-lg"/>
                             </button>
                         </div>
                     </div>
