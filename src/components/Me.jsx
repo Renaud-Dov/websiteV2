@@ -32,7 +32,7 @@ const framework = [
 export function Me() {
     return (
         <div className=":container bg-black text-white scroll-auto ">
-            <div className="h-screen md:flex ">
+            <div className="h-screen md:flex md:mx-6">
                 <div className="bg-black self-center mx-auto flex-1 w-72 ">
                     <img src={picture} className="h-48 w-48  md:h-80 md:w-80 rounded-full mx-auto" alt="Dov"/>
                     <div className="mt-4">
@@ -52,7 +52,7 @@ export function Me() {
                     <Contact/>
                 </div>
 
-                <div className="md:flex-1 md:flex overflow-hidden px-5 bg-black text-white md:mr-5">
+                <div className="md:flex-1 md:flex overflow-hidden px-5 bg-black text-white ">
                     <div className="md:flex-1 overflow-y-scroll">
                         <h1 className="text-6xl font-Lato text-left text-green-500 font-bold py-8">About me</h1>
                         <p className="text-3xl font-Lato text-left ml-5">
