@@ -7,8 +7,9 @@ export class Footer extends Component {
                 <div className="container py-5">
                     <div className="content has-text-centered">
                         <p>
-                            Made with <span className="icon text-red-600 font-bold"><i className="fa fa-heart"/> </span>
-                             with React and tailwindcss.
+                            Made with <span className="icon text-green-500 font-bold"><i className="fa fa-heart"/> </span>
+                            with <span className="icon text-green-500 font-bold">React</span> and <span
+                            className="icon text-green-500 font-bold">tailwindcss.</span>
                         </p>
                     </div>
                 </div>

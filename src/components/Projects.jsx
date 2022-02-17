@@ -39,6 +39,7 @@ class ProjectItem extends Component {
             isHovered: false
         };
         this.handleHover = this.handleHover.bind(this);
+
     }
 
     handleHover() {
@@ -48,12 +49,18 @@ class ProjectItem extends Component {
     }
 
     render() {
+        let bg = null;
+        if (this.props.item.picture !== undefined) {
+            bg = <img src={this.props.item.picture} alt="Avatar"
+                      className={"object-cover w-full h-full  opacity-50"}/>
+        }
+        else {
+            bg = <div className={"w-full h-full bg-green-500"}/>
+        }
         return (
-            <div className="relative h-20 hover:h-40 duration-200" onMouseEnter={this.handleHover}
+            <div className="relative h-28 hover:h-40 duration-200" onMouseEnter={this.handleHover}
                  onMouseLeave={this.handleHover}>
-                <img src={this.props.item.picture} alt="Avatar"
-                     className="object-cover w-full h-full bg-black opacity-50"/>
-
+                {bg}
                 <div
                     className={"absolute object-fill w-full h-full inset-y-0 text-white font-bold text-xl text-left transition-all"}>
                     <div className="flex flex-wrap flex-row gap-10 p-5 justify-center">
