@@ -1,6 +1,6 @@
 import picture from "../dov.jpeg";
 import epita from "../EPITA_LOGO_INGENIEUR_CMJN.svg"
-import {Contact} from "../Contact";
+import {Contact} from "./Contact";
 import {Footer} from "./Footer";
 import {Projects} from "./Projects";
 
@@ -33,8 +33,8 @@ export function Me() {
     return (
         <div className=":container bg-black text-white scroll-auto ">
             <div className="h-screen md:flex ">
-                <div className="bg-black self-center flex-1 w-72 ">
-                    <img src={picture} className="h-80 w-80 rounded-full mx-auto" alt="Dov"/>
+                <div className="bg-black self-center mx-auto flex-1 w-72 ">
+                    <img src={picture} className="h-48 w-48  md:h-80 md:w-80 rounded-full mx-auto" alt="Dov"/>
                     <div className="mt-4">
                         <h1 className="text-2xl font-bold">Dov</h1>
                         <h2 className="text-lg font-light">Full Stack Developer</h2>
@@ -63,8 +63,8 @@ export function Me() {
                         <h1 className="text-6xl font-Lato text-left text-green-500  font-bold pt-8">Skills</h1>
                         <h1 className="text-xl font-Lato text-left text-green-500 ml-5 font-bold py-8">Languages</h1>
                         <div className="flex flex-wrap gap-4 ml-5">
-                            {skills.map((item) => (
-                                <p className={`font-Lato break-inside-avoid-column min-w-[10%] text-left font-bold rounded-full bg-green-500 border-8 border-green-500`}>
+                            {skills.map((item,index) => (
+                                <p key={index} className={`font-Lato break-inside-avoid-column min-w-[10%] text-left font-bold rounded-full bg-green-500 border-8 border-green-500`}>
                                     {item.lang} <i className={`${item.logo}`}/>
                                 </p>
                             ))}
@@ -72,16 +72,16 @@ export function Me() {
                         <h1 className="text-xl font-Lato text-left text-green-500 ml-5 font-bold py-8">Framework and
                             tools</h1>
                         <div className="flex flex-wrap gap-4 ml-5">
-                            {framework.map((item) => (
-                                <p className={`font-Lato hover:scale-110 duration-300 min-w-[10%]  font-bold rounded-full bg-green-500 border-8 border-green-500`}>
+                            {framework.map((item,index) => (
+                                <p key={index} className={`font-Lato hover:scale-110 duration-300 min-w-[10%]  font-bold rounded-full bg-green-500 border-8 border-green-500`}>
                                     {item.lang} <i className={`${item.logo} `}/>
                                 </p>
 
                             ))}
                         </div>
-                        <h1 className="text-6xl font-Lato text-left text-green-500  font-bold pt-8">My Projects</h1>
-                        <Footer />
+                        <h1 className="text-6xl font-Lato text-left text-green-500  font-bold py-8">My Projects</h1>
                         <Projects/>
+                        <Footer />
 
                     </div>
 

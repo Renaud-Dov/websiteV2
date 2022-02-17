@@ -1,12 +1,9 @@
 import React, {useState, Component} from 'react';
+import panic from "../panicAtTortuga.png";
+import checkstudents from "../checkstudents.jpg";
+import websiteIcon from "../website.jpg";
 
 const list = [
-    {
-        name: 'Panic at Tortuga',
-        description: 'Panic At Tortuga is a video game developed on Unity Engine during Epita\'s S2 project in a team of 4.',
-        picture: 'https://bugbear.fr/img/panicAtTortuga.png',
-        link: 'https://lifeinvaders.github.io/website/'
-    },
     {
         name: 'opticalloop',
         description: 'Opticalloop is OCR application made in C to recognise and solve sudokus.',
@@ -14,17 +11,24 @@ const list = [
         link: 'https://opticalloop.bugbear.fr/'
     },
     {
-        name: 'Bugbear',
-        description: 'My first personal Portfolio, made with bootstrap.',
-        picture: 'https://bugbear.fr/img/website.jpg',
-        link: 'https://bugbear.fr/'
+        name: 'Panic at Tortuga',
+        description: 'Panic At Tortuga is a video game developed on Unity Engine during Epita\'s S2 project in a team of 4.',
+        picture: panic,
+        link: 'https://lifeinvaders.github.io/website/'
     },
     {
         name: "CheckStudents",
         description: "CheckStudent is Python Discord bot to take the attendance in class used in several servers around the world.",
-        picture: "https://bugbear.fr/img/checkstudents.jpg",
+        picture: checkstudents,
         link: "https://github.com/Renaud-Dov/CheckStudents",
-    }
+    },
+    {
+        name: 'First Portfolio',
+        description: 'My first personal Portfolio, made with bootstrap.',
+        picture: websiteIcon,
+        link: 'https://me.bugbear.fr/'
+    },
+
 
 ]
 
@@ -51,16 +55,16 @@ class ProjectItem extends Component {
                      className="object-cover w-full h-full bg-black opacity-50"/>
 
                 <div
-                    className={"absolute object-fill w-full h-full inset-y-0 text-white font-bold text-xl text-left bg-black opacity-50 transition-all"}>
+                    className={"absolute object-fill w-full h-full inset-y-0 text-white font-bold text-xl text-left transition-all"}>
                     <div className="flex flex-wrap flex-row gap-10 p-5 justify-center">
                         <div
-                            className={"absolute object-fill w-full h-full visible duration-200 inset-y-0 text-white font-light text-4xl text-left transition-all"}>
+                            className={"absolute object-fill w-full h-full visible duration-200 inset-y-0 pl-4 pt-2 text-white font-light text-4xl text-left transition-all"}>
                             {this.props.item.name}
                         </div>
                         <div className={(this.state.isHovered ? 'visible ' : 'invisible ') + "pt-8"}>
                             <p>{this.props.item.description}</p>
                             <button ref={this.props.item.link}>
-                                Check this out <i className="fa-solid fa-arrow-up-right-from-square px-1 fa-lg"/>
+                                Check this out <i className="fa-solid  z-1 fa-arrow-up-right-from-square px-1 fa-lg"/>
                             </button>
                         </div>
                     </div>
@@ -76,9 +80,10 @@ class ProjectItem extends Component {
 export function Projects() {
     return (
         <div className="flex flex-col">
-            {list.map((item) => (
-                <ProjectItem item={item}/>
+            {list.map((item,index) => (
+                <ProjectItem key={index} item={item}/>
             ))}
+            <ProjectItem item={{name:"Other projects",link:"#"}}/>
 
         </div>
 

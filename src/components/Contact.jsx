@@ -19,7 +19,7 @@ export class Contact extends Component {
                         <a href={link.url} className=" text-left w-full w-1/6 md:w-1/2 p-4 text-green-500 hover:text-white" target="_blank"
                            rel="noreferrer noopener" key={index}>
                             <i className={`${link.icon} fa-2x`}/>
-                            <span className="text-xl ml-2">{link.name}</span>
+                            <span className="text-xl ml-4 invisible md:visible">{link.name}</span>
                         </a>
                     ))}
 
