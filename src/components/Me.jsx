@@ -54,8 +54,8 @@ export function Me() {
 
                 <div className="md:flex-1 md:flex overflow-hidden px-5 bg-black text-white ">
                     <div className="md:flex-1 overflow-y-scroll">
-                        <h1 className="text-6xl font-Lato text-left text-green-500 font-bold py-8">About me</h1>
-                        <p className="text-3xl font-Lato text-left ml-5 leading-10">
+                        <h1  className="text-4xl md:text-6xl font-Lato text-left text-green-500 font-bold py-8">About me</h1>
+                            <p className="text-xl md:text-3xl font-Lato text-left ml-5 leading-10">
                             I am a student at <a href="https://epita.fr"><img src={epita}
                                                                               className="h-14 w-14 fill-green-500 font-medium mx-auto inline-block"
                                                                               alt="Epita LOGO"/></a> and developer with
@@ -70,7 +70,7 @@ export function Me() {
                             className="fa-brands fa-flickr "/></a>.
 
                         </p>
-                        <h1 className="text-6xl font-Lato text-left text-green-500  font-bold pt-8">Skills</h1>
+                        <h1 className="text-4xl md:text-6xl font-Lato text-left text-green-500  font-bold pt-8">Skills</h1>
                         <h1 className="text-xl font-Lato text-left text-green-500 ml-5 font-bold py-8">Languages</h1>
                         <div className="flex flex-wrap gap-4 ml-5">
                             {skills.map((item, index) => (
@@ -91,7 +91,7 @@ export function Me() {
 
                             ))}
                         </div>
-                        <h1 className="text-6xl font-Lato text-left text-green-500  font-bold py-8">My Projects</h1>
+                        <h1 className="text-4xl md:text-6xl font-Lato text-left text-green-500  font-bold py-8">My Projects</h1>
                         <Projects/>
                         <Footer/>
 

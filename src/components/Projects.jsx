@@ -71,13 +71,13 @@ class ProjectItem extends Component {
                     className={"absolute object-fill w-full h-full inset-y-0 text-white font-bold text-xl text-left transition-all"}>
                     <div className="flex flex-wrap flex-row gap-10 p-5 justify-center content-center">
                         <div
-                            className={"absolute object-fill hover:underline hover:decoration-1 w-full h-full visible duration-200 inset-y-0 pl-4 pt-2 text-white font-medium text-4xl text-left transition-all"}>
+                            className={"absolute object-fill hover:underline hover:decoration-1 w-full h-full visible duration-200 inset-y-0 pl-4 pt-2 text-white font-medium text-2xl md:text-4xl text-left transition-all"}>
                             {this.props.item.name}
                         </div>
                         <div className={(this.state.isHovered ? 'visible ' : 'invisible ') + "absolute pt-8 pl-4"}>
                             <p>{this.props.item.description}</p>
                             <a href={this.props.item.link} className={text_color + " hover:underline  hover:decoration-2 pt-3"}>
-                                Check this out <i className="fa-solid  fa-arrow-up-right-from-square px-1 fa-lg"/>
+                                Check this out <i className="fa-solid  fa-arrow-up-right-from-square px-1 md:fa-lg"/>
                             </a>
                         </div>
                     </div>
