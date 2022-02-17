@@ -52,7 +52,7 @@ export function Me() {
                     <Contact/>
                 </div>
 
-                <div className="md:flex-1 md:flex overflow-hidden px-5 bg-black text-white ">
+                <div className="md:flex-1 md:flex overflow-hidden px-5 bg-black text-white md:mr-5">
                     <div className="md:flex-1 overflow-y-scroll">
                         <h1 className="text-6xl font-Lato text-left text-green-500 font-bold py-8">About me</h1>
                         <p className="text-3xl font-Lato text-left ml-5">
