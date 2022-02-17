@@ -42,7 +42,7 @@ export function Me() {
                     </div>
                     <div className="my-5">
                         <a href="https://api.bugbear.fr/cv/fr"
-                           className="rounded-full border-4 py-2 border-green-500 bg-green-500  hover:text-white"
+                           className="rounded-full border-4 py-2 border-green-500 bg-green-500 hover:bg-green-700 hover:border-green-700 hover:text-white"
                            target="_blank"
                            rel="noreferrer noopener">
                             <span className="text-xl font-bold ml-2">My CV</span> <i
@@ -55,11 +55,20 @@ export function Me() {
                 <div className="md:flex-1 md:flex overflow-hidden px-5 bg-black text-white ">
                     <div className="md:flex-1 overflow-y-scroll">
                         <h1 className="text-6xl font-Lato text-left text-green-500 font-bold py-8">About me</h1>
-                        <p className="text-3xl font-Lato text-left ml-5">
-                            I am a student at <img src={epita} className="h-14 w-14 fill-green-500 mx-auto inline-block"
-                                                   alt="Epita LOGO"/> and developer with a passion for learning and
+                        <p className="text-3xl font-Lato text-left ml-5 leading-10">
+                            I am a student at <a href="https://epita.fr"><img src={epita}
+                                                                              className="h-14 w-14 fill-green-500 font-medium mx-auto inline-block"
+                                                                              alt="Epita LOGO"/></a> and developer with
+                            a passion for learning and
                             problem solving. I am currently working on my master degree in Computer Science.
                             I am a very good eager to learn new technologies and I am always looking for new challenges.
+                            I also like photography, you can find few pictures on <a
+                            href="https://flic.kr/ps/3YdDB4"
+                            className="rounded-full px-1 border-4 text-xl border-green-500 bg-green-500 hover:bg-green-700 hover:border-green-700 hover:text-white"
+                            target="_blank"
+                            rel="noreferrer noopener">Flickr <i
+                            className="fa-brands fa-flickr "/></a>.
+
                         </p>
                         <h1 className="text-6xl font-Lato text-left text-green-500  font-bold pt-8">Skills</h1>
                         <h1 className="text-xl font-Lato text-left text-green-500 ml-5 font-bold py-8">Languages</h1>
