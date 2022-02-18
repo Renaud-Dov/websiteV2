@@ -17,15 +17,19 @@ const skills =
 
 
     ]
-const framework = [
+const tools = [
 
     {lang: "Flask", color: "green", "logo": "devicon-flask-plain"},
     {lang: "expressJS", color: "green", "logo": "devicon-express-original"},
+    {lang: "Linux", color: "green", "logo": "devicon-linux-plain"},
+    {lang: "Git", color: "green", "logo": "devicon-git-plain"},
     {lang: "Firebase", color: "yellow", "logo": "devicon-firebase-plain"},
     {lang: "Docker", color: "green", "logo": "devicon-docker-plain"},
     {lang: "Azure", color: "green", "logo": "devicon-azure-plain"},
     {lang: "React", color: "green", "logo": "devicon-react-original"},
     {lang: "Electron", color: "green", "logo": "devicon-electron-original"},
+    {lang: "Unity", color: "green", "logo": "devicon-unity-original"},
+    {lang: "Matlab", color: "green", "logo": "devicon-matlab-plain"},
 
 ]
 
@@ -54,8 +58,8 @@ export function Me() {
 
                 <div className="md:flex-1 md:flex overflow-hidden px-5 bg-black text-white ">
                     <div className="md:flex-1 overflow-y-scroll">
-                        <h1  className="text-4xl md:text-6xl font-Lato text-left text-green-500 font-bold py-8">About me</h1>
-                            <p className="text-xl md:text-3xl font-Lato text-left ml-5 leading-10">
+                        <h1  className="text-4xl md:text-6xl font-Lato text-left text-green-500 font-bold py-4">About me</h1>
+                            <p className="text-xl md:text-3xl font-Lato text-left ml-5 leading-9 md:leading-10">
                             I am a student at <a href="https://epita.fr"><img src={epita}
                                                                               className="h-14 w-14 fill-green-500 font-medium mx-auto inline-block"
                                                                               alt="Epita LOGO"/></a> and developer with
@@ -83,7 +87,7 @@ export function Me() {
                         <h1 className="text-xl font-Lato text-left text-green-500 ml-5 font-bold py-8">Framework and
                             tools</h1>
                         <div className="flex flex-wrap gap-4 ml-5">
-                            {framework.map((item, index) => (
+                            {tools.map((item, index) => (
                                 <p key={index}
                                    className={`font-Lato hover:scale-110 duration-300 min-w-[10%]  font-bold rounded-full bg-green-500 border-8 border-green-500`}>
                                     {item.lang} <i className={`${item.logo} `}/>
