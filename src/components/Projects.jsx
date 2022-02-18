@@ -35,6 +35,11 @@ const list = [
         picture: websiteIcon,
         link: 'https://me.bugbear.fr/'
     },
+    {
+        name:"Other Projects",
+        description:"Here are some other projects I made during my studies.",
+        link: "https://github.com/Renaud-Dov?tab=repositories",
+    }
 ]
 
 class ProjectItem extends Component {
@@ -69,7 +74,7 @@ class ProjectItem extends Component {
                 {bg}
                 <div
                     className={"absolute object-fill w-full h-full inset-y-0 text-white font-bold text-xl text-left transition-all"}>
-                    <div className="flex flex-wrap flex-row gap-10 p-5 justify-center content-center">
+                    <div className="flex flex-wrap flex-row gap-10 p-5 ">
                         <div
                             className={"absolute object-fill hover:underline hover:decoration-1 w-full h-full visible duration-200 inset-y-0 pl-4 pt-2 text-white font-medium text-2xl md:text-4xl text-left transition-all"}>
                             {this.props.item.name}
@@ -96,7 +101,6 @@ export function Projects() {
             {list.map((item, index) => (
                 <ProjectItem key={index} item={item}/>
             ))}
-            <ProjectItem item={{name: "Other projects", link: "/projects"}}/>
 
         </div>
 

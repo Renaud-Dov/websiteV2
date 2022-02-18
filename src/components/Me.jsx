@@ -42,7 +42,7 @@ export function Me() {
                     <img src={picture} className="h-48 w-48  md:h-80 md:w-80 rounded-full mx-auto" alt="Dov"/>
                     <div className="mt-4">
                         <h1 className="text-2xl font-bold">Renaud-Dov DEVERS</h1>
-                        <h2 className="text-lg font-light">Full Stack Developer</h2>
+                        <h2 className="text-lg font-light">Student & Developer</h2>
                     </div>
                     <div className="my-5">
                         <a href="https://api.bugbear.fr/cv/fr"
@@ -68,7 +68,7 @@ export function Me() {
                             I am a very good eager to learn new technologies and I am always looking for new challenges.
                             I also like photography, you can find few pictures on <a
                             href="https://flic.kr/ps/3YdDB4"
-                            className="rounded-full px-1 border-4 text-xl border-green-500 bg-green-500 hover:bg-green-700 hover:border-green-700 hover:text-white"
+                            className="rounded-full px-1 border-4 font-bold text-xl border-green-500 bg-green-500 hover:bg-green-700 hover:border-green-700 hover:text-white"
                             target="_blank"
                             rel="noreferrer noopener">Flickr <i
                             className="fa-brands fa-flickr "/></a>.
