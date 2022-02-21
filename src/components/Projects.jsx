@@ -1,48 +1,67 @@
 import React, {useState, Component} from 'react';
-import panic from "../panicAtTortuga.png";
-import checkstudents from "../checkstudents.jpg";
-import websiteIcon from "../website.jpg";
-import websiteIcon2 from "../websitev2.jpg";
-
+import panic from "../img/panicAtTortuga.png";
+import checkstudents from "../img/checkstudents.jpg";
+import websiteIcon from "../img/website.jpg";
+import websiteIcon2 from "../img/websitev2.jpg";
+import {data,lang} from "../data";
 const list = [
     {
         name: 'Opticalloop OCR',
-        description: 'Opticalloop is OCR application made in C to recognise and solve sudokus.',
+        description: {
+            en: "Opticalloop is OCR application made in C to recognise and solve sudokus.",
+            fr: "Opticalloop est une application écrite en C pour reconnaître et résoudre des sudokus.",
+        },
         picture: 'https://opticalloop.bugbear.fr/picture/our_project.gif',
         link: 'https://opticalloop.bugbear.fr/',
         tech: ["devicon-c-plain", "devicon-python-plain"]
     },
     {
         name: 'Panic at Tortuga',
-        description: 'Panic at Tortuga is a video game developed on Unity Engine during Epita\'s S2 project in a team of 4.',
+        description: {
+            en: "Panic at Tortuga is a video game developed on Unity Engine during Epita's S2 project in a team of 4.",
+            fr: "Panic at Tortuga est un jeu vidéo développé avec le moteur Unity durant le projet de S2 d'Epita en équipe de 4."
+        },
         picture: panic,
         link: 'https://lifeinvaders.github.io/website/',
         tech: ["devicon-csharp-plain", "devicon-unity-original"]
     },
     {
         name: "CheckStudents",
-        description: "CheckStudent is Discord bot written in Python to take the attendance in class used in several servers around the world.",
+        description: {
+            en: "CheckStudent is Discord bot written in Python to take the attendance in class used in several servers around the world.",
+            fr: "CheckStudent est un bot Discord écrit en Python pour permettre de faire l'appel en distanciel. Il est utilisé dans plusieurs serveurs autour du monde.",
+        },
         picture: checkstudents,
         link: "https://github.com/Renaud-Dov/CheckStudents",
         tech: ["devicon-python-plain"]
     },
     {
         name: "Second Portfolio",
-        description: "This portfolio is a website made with ReactJS and tailwindcss. It also host some pictures I took during my trips.",
+        description: {
+            en: "This portfolio is a website made with ReactJS and tailwindcss. It also host some pictures I took during my trips.",
+            fr: "Ce portfolio est un site web écrit avec ReactJS et tailwindcss. Il contient également des photos que j'ai pris durant mes voyages.",
+        },
         picture: websiteIcon2,
         link: "https://bugbear.fr/",
         tech: ["devicon-nodejs-plain", "devicon-react-original", "devicon-tailwindcss-plain"]
     },
     {
         name: 'First Portfolio',
-        description: 'My first personal Portfolio, made with bootstrap, and few other libraries.',
+        description: {
+            en: 'My first personal Portfolio, made with bootstrap, and few other libraries.',
+            fr: "Mon premier portfolio personnel, écrit avec Bootstrap et quelques autres librairies."
+        },
+
         picture: websiteIcon,
         link: 'https://me.bugbear.fr/',
         tech: ["devicon-bootstrap-plain", "devicon-html5-plain", "devicon-css3-plain", "devicon-javascript-plain"]
     },
     {
         name: "Other Projects",
-        description: "Here are some other projects I made during my studies.",
+        description: {
+            en: "Here are some other projects I made during my studies.",
+            fr: "Voici quelques autres projets que j'ai réalisé durant mes études."
+        },
         link: "https://github.com/Renaud-Dov?tab=repositories",
         tech: []
     }
@@ -82,14 +101,14 @@ class ProjectItem extends Component {
                     className={"absolute object-fill w-full h-full inset-y-0 text-white font-bold text-xl text-left transition-all"}>
                     <div className="flex flex-wrap flex-row gap-10 p-5 ">
                         <div
-                            className={(this.state.isHovered ? 'underline ' : ' ') +"absolute object-fill decoration-2 h-full visible duration-200 inset-y-0 pl-4 pt-2 text-white font-medium text-2xl md:text-4xl text-left transition-all"}>
+                            className={(this.state.isHovered ? 'underline ' : ' ') + "absolute object-fill decoration-2 h-full visible duration-200 inset-y-0 pl-4 pt-2 text-white font-medium text-2xl md:text-4xl text-left transition-all"}>
                             {this.props.item.name}
                         </div>
                         <div className={(this.state.isHovered ? 'visible ' : 'invisible ') + "absolute pt-8 px-4"}>
-                            <p>{this.props.item.description}</p>
+                            <p>{this.props.item.description[lang]}</p>
                             <a href={this.props.item.link}
                                className={text_color + " hover:underline  hover:decoration-2 pt-3"}>
-                                Check this out <i className="fa-solid  fa-arrow-up-right-from-square px-1 md:fa-lg"/>
+                                {this.props.item.picture !== undefined ? data.link_project : data.link_other_projects} <i className="fa-solid  fa-arrow-up-right-from-square px-1 md:fa-lg"/>
                             </a>
                             <div className="flex flex-wrap  gap-4 pt-2 right-0">
                                 {this.props.item.tech.map((tech, index) => {
@@ -113,8 +132,7 @@ class ProjectItem extends Component {
 
 export function Projects() {
     return <>
-        <h1 className="text-4xl md:text-6xl font-Lato text-left text-green-500 ml-3 md:ml-0  font-bold py-8">My
-            Projects</h1>
+        <h1 className="text-4xl md:text-6xl font-Lato text-left text-green-500 ml-3 md:ml-0  font-bold py-8">{data.projects}</h1>
         <div className="flex flex-col border-green-500  border-4 rounded-md">
             {list.map((item, index) => (
                 <ProjectItem key={index} item={item}/>

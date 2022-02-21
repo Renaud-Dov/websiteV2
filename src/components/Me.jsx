@@ -1,8 +1,9 @@
-import picture from "../dov.jpeg";
-import epita from "../EPITA_LOGO_INGENIEUR_CMJN.svg"
+import picture from "../img/dov.jpeg";
+import epita from "../img/EPITA_LOGO_INGENIEUR_CMJN.svg"
 import {Contact} from "./Contact";
 import {Footer} from "./Footer";
 import {Projects} from "./Projects";
+import {data, lang, changeLang} from "../data";
 
 const skills =
     [
@@ -36,16 +37,11 @@ const tools = [
 
 function AboutMe() {
     return <>
-        <h1 className="text-4xl md:text-6xl font-Lato text-left text-green-500 font-bold ml-3 md:ml-0  py-4">About
-            me</h1>
+        <h1 className="text-4xl md:text-6xl font-Lato text-left text-green-500 font-bold ml-3 md:ml-0 md:mt-8 py-4">{data.about_me}</h1>
         <p className="text-xl md:text-3xl break-normal  text-justify font-Lato md:text-left mx-5 leading-9 md:leading-10">
-            I am a student at <a href="https://epita.fr"><img src={epita}
-                                                              className="h-14 w-14 fill-green-500 font-medium mx-auto inline-block"
-                                                              alt="Epita LOGO"/></a> and developer with
-            a passion for learning and
-            problem solving. I am currently working on my master degree in Computer Science.
-            I am a very good eager to learn new technologies and I am always looking for new challenges.
-            I also like photography, you can find few pictures on <a
+            {data.about_me_text1} <a href="https://epita.fr"><img src={epita}
+                                                                  className="h-14 w-14 fill-green-500 font-medium mx-auto inline-block"
+                                                                  alt="Epita LOGO"/></a> {data.about_me_text2} <a
             href="https://flic.kr/ps/3YdDB4"
             className="rounded-full px-1 border-4 font-bold text-xl border-green-500 bg-green-500 hover:bg-green-700 hover:border-green-700 hover:text-white"
             target="_blank"
@@ -58,8 +54,8 @@ function AboutMe() {
 
 function Skills() {
     return <>
-        <h1 className="text-4xl md:text-6xl font-Lato text-left text-green-500 ml-3 md:ml-0  font-bold pt-8">Skills</h1>
-        <h1 className="text-xl font-Lato text-left text-green-500 ml-5 font-bold py-8">Languages</h1>
+        <h1 className="text-4xl md:text-6xl font-Lato text-left text-green-500 ml-3 md:ml-0  font-bold pt-8">{data.skills}</h1>
+        <h1 className="text-xl font-Lato text-left text-green-500 ml-5 font-bold py-8">{data.languages}</h1>
         <div className="flex flex-wrap gap-4 ml-5">
             {skills.map((item, index) => (
                 <p key={index}
@@ -68,8 +64,7 @@ function Skills() {
                 </p>
             ))}
         </div>
-        <h1 className="text-xl font-Lato text-left text-green-500 ml-5 font-bold py-8">Framework and
-            tools</h1>
+        <h1 className="text-xl font-Lato text-left text-green-500 ml-5 font-bold py-8">{data.framework}</h1>
         <div className="flex flex-wrap gap-4 ml-5">
             {tools.map((item, index) => (
                 <p key={index}
@@ -82,7 +77,7 @@ function Skills() {
     </>;
 }
 
-export function Me() {
+export function Me(props) {
     return (
         <div className=":container bg-black text-white scroll-auto ">
             <div className="h-screen md:flex md:px-5">
@@ -90,14 +85,14 @@ export function Me() {
                     <img src={picture} className="h-48 w-48  md:h-80 md:w-80 rounded-full mx-auto" alt="Dov"/>
                     <div className="mt-4">
                         <h1 className="text-2xl font-bold">Renaud-Dov DEVERS</h1>
-                        <h2 className="text-lg font-light">Student & Developer</h2>
+                        <h2 className="text-lg font-light">{data.profession}</h2>
                     </div>
                     <div className="my-5">
-                        <a href="https://api.bugbear.fr/cv/en"
+                        <a href={"https://api.bugbear.fr/cv/" + lang}
                            className="rounded-full border-4 py-2 border-green-500 bg-green-500 hover:bg-green-700 hover:border-green-700 hover:text-white"
                            target="_blank"
                            rel="noreferrer noopener">
-                            <span className="text-xl font-bold ml-2">My CV</span> <i
+                            <span className="text-xl font-bold ml-2">{data.cv_button}</span> <i
                             className="fa-solid fa-arrow-up-right-from-square px-1 fa-lg"/>
                         </a>
                     </div>
