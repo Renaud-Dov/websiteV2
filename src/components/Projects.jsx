@@ -65,7 +65,7 @@ class ProjectItem extends Component {
     }
 
     render() {
-        let bg = null;
+        let bg;
         let text_color = "text-green-500";
         if (this.props.item.picture !== undefined) {
             bg = <img src={this.props.item.picture} alt="Avatar"

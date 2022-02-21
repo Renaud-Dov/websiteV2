@@ -93,7 +93,7 @@ export function Me() {
                         <h2 className="text-lg font-light">Student & Developer</h2>
                     </div>
                     <div className="my-5">
-                        <a href="https://api.bugbear.fr/cv/fr"
+                        <a href="https://api.bugbear.fr/cv/en"
                            className="rounded-full border-4 py-2 border-green-500 bg-green-500 hover:bg-green-700 hover:border-green-700 hover:text-white"
                            target="_blank"
                            rel="noreferrer noopener">
