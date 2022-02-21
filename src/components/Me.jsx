@@ -36,7 +36,8 @@ const tools = [
 
 function AboutMe() {
     return <>
-        <h1 className="text-4xl md:text-6xl font-Lato text-left text-green-500 font-bold ml-3 py-4">About me</h1>
+        <h1 className="text-4xl md:text-6xl font-Lato text-left text-green-500 font-bold ml-3 md:ml-0  py-4">About
+            me</h1>
         <p className="text-xl md:text-3xl break-normal  text-justify font-Lato md:text-left mx-5 leading-9 md:leading-10">
             I am a student at <a href="https://epita.fr"><img src={epita}
                                                               className="h-14 w-14 fill-green-500 font-medium mx-auto inline-block"
@@ -55,10 +56,36 @@ function AboutMe() {
     </>;
 }
 
+function Skills() {
+    return <>
+        <h1 className="text-4xl md:text-6xl font-Lato text-left text-green-500 ml-3 md:ml-0  font-bold pt-8">Skills</h1>
+        <h1 className="text-xl font-Lato text-left text-green-500 ml-5 font-bold py-8">Languages</h1>
+        <div className="flex flex-wrap gap-4 ml-5">
+            {skills.map((item, index) => (
+                <p key={index}
+                   className={`font-Lato hover:scale-110 duration-300 min-w-[10%] font-bold rounded-full bg-green-500 border-8 border-green-500`}>
+                    {item.lang} <i className={`${item.logo}`}/>
+                </p>
+            ))}
+        </div>
+        <h1 className="text-xl font-Lato text-left text-green-500 ml-5 font-bold py-8">Framework and
+            tools</h1>
+        <div className="flex flex-wrap gap-4 ml-5">
+            {tools.map((item, index) => (
+                <p key={index}
+                   className={`font-Lato hover:scale-110 duration-300 min-w-[10%]  font-bold rounded-full bg-green-500 border-8 border-green-500`}>
+                    {item.lang} <i className={`${item.logo} `}/>
+                </p>
+
+            ))}
+        </div>
+    </>;
+}
+
 export function Me() {
     return (
         <div className=":container bg-black text-white scroll-auto ">
-            <div className="h-screen md:flex md:mx-6">
+            <div className="h-screen md:flex md:px-5">
                 <div className="bg-black self-center mx-auto flex-1">
                     <img src={picture} className="h-48 w-48  md:h-80 md:w-80 rounded-full mx-auto" alt="Dov"/>
                     <div className="mt-4">
@@ -80,29 +107,8 @@ export function Me() {
                 <div className="md:flex-1 md:flex overflow-hidden w-full bg-black text-white ">
                     <div className="md:flex-1 overflow-y-scroll">
                         <AboutMe/>
-                        <h1 className="text-4xl md:text-6xl font-Lato text-left text-green-500 ml-3 font-bold pt-8">Skills</h1>
-                        <h1 className="text-xl font-Lato text-left text-green-500 ml-5 font-bold py-8">Languages</h1>
-                        <div className="flex flex-wrap gap-4 ml-5">
-                            {skills.map((item, index) => (
-                                <p key={index}
-                                   className={`font-Lato hover:scale-110 duration-300 min-w-[10%] font-bold rounded-full bg-green-500 border-8 border-green-500`}>
-                                    {item.lang} <i className={`${item.logo}`}/>
-                                </p>
-                            ))}
-                        </div>
-                        <h1 className="text-xl font-Lato text-left text-green-500 ml-5 font-bold py-8">Framework and
-                            tools</h1>
-                        <div className="flex flex-wrap gap-4 ml-5">
-                            {tools.map((item, index) => (
-                                <p key={index}
-                                   className={`font-Lato hover:scale-110 duration-300 min-w-[10%]  font-bold rounded-full bg-green-500 border-8 border-green-500`}>
-                                    {item.lang} <i className={`${item.logo} `}/>
-                                </p>
+                        <Skills/>
 
-                            ))}
-                        </div>
-                        <h1 className="text-4xl md:text-6xl font-Lato text-left text-green-500 ml-3 font-bold py-8">My
-                            Projects</h1>
                         <Projects/>
                         <Footer/>
 

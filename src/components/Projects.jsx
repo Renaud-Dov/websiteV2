@@ -75,17 +75,17 @@ class ProjectItem extends Component {
             text_color = "text-white"
         }
         return (
-            <div className="relative h-28 hover:h-48 duration-200" onMouseEnter={this.handleHover}
+            <div className="relative h-28 hover:h-52 duration-200" onMouseEnter={this.handleHover}
                  onMouseLeave={this.handleHover}>
                 {bg}
                 <div
                     className={"absolute object-fill w-full h-full inset-y-0 text-white font-bold text-xl text-left transition-all"}>
                     <div className="flex flex-wrap flex-row gap-10 p-5 ">
                         <div
-                            className={(this.state.isHovered ? 'underline ' : ' ') +"absolute object-fill decoration-1 h-full visible duration-200 inset-y-0 pl-4 pt-2 text-white font-medium text-2xl md:text-4xl text-left transition-all"}>
+                            className={(this.state.isHovered ? 'underline ' : ' ') +"absolute object-fill decoration-2 h-full visible duration-200 inset-y-0 pl-4 pt-2 text-white font-medium text-2xl md:text-4xl text-left transition-all"}>
                             {this.props.item.name}
                         </div>
-                        <div className={(this.state.isHovered ? 'visible ' : 'invisible ') + "absolute pt-8 pl-4"}>
+                        <div className={(this.state.isHovered ? 'visible ' : 'invisible ') + "absolute pt-8 px-4"}>
                             <p>{this.props.item.description}</p>
                             <a href={this.props.item.link}
                                className={text_color + " hover:underline  hover:decoration-2 pt-3"}>
@@ -112,13 +112,15 @@ class ProjectItem extends Component {
 }
 
 export function Projects() {
-    return (
-        <div className="flex flex-col border-green-500 border-4 rounded-md">
+    return <>
+        <h1 className="text-4xl md:text-6xl font-Lato text-left text-green-500 ml-3 md:ml-0  font-bold py-8">My
+            Projects</h1>
+        <div className="flex flex-col border-green-500  border-4 rounded-md">
             {list.map((item, index) => (
                 <ProjectItem key={index} item={item}/>
             ))}
 
         </div>
+    </>;
 
-    )
 }
