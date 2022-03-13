@@ -3,7 +3,7 @@ export const data_raw =
     {
         en: {
             profession: "Student & Developer",
-            cv_button: "My CV",
+            cv_button: "My Resume",
             change_lang: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg",
             about_me: "About me",
             about_me_text1: "I am a student at",
@@ -25,7 +25,7 @@ export const data_raw =
             about_me_text1: "Je suis étudiant à l'",
             about_me_text2: "et développeur qui aime apprendre constamment et résoudre des problèmes. Je prépare actuellement mon master en informatique. Je suis très avide d'apprendre de nouvelles technologies et je suis toujours à la recherche de nouveaux défis. J'aime beaucoup aussi la photographie, vous pouvez par ailleurs trouver quelques-unes de mes photos sur",
             skills: "Compétences",
-            languages: "Langues",
+            languages: "Languages",
             framework: "Framework et outils",
             projects: "Projets",
             link_project: "Voir ce projet",
