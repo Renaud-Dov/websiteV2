@@ -12,9 +12,9 @@ class App extends Component {
                     changeLang();
                     this.setState({});
                 }}
-                        className="absolute bg-black flex ml-3 mt-3">
+                        className="absolute flex ml-3 mt-3">
                     <img src={data.change_lang} alt="change language"
-                         className="h-10 w-16   inline-block rounded-xl border-green-500 border-2"/>
+                         className="max-h-10 max-w-16  bg-green-500 p-0 m-0  rounded-xl"/>
                     /></button>
                 <Me/>
             </div>
