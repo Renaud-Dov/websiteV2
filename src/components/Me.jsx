@@ -3,7 +3,8 @@ import epita from "../img/EPITA_LOGO_INGENIEUR_CMJN.svg"
 import {Contact} from "./Contact";
 import {Footer} from "./Footer";
 import {Projects} from "./Projects";
-import {data, lang, changeLang} from "../data";
+import {data, lang} from "../data";
+import React, {Component} from "react";
 
 const skills =
     [
@@ -77,30 +78,33 @@ function Skills() {
     </>;
 }
 
-export function Me(props) {
-    return (
-        <div className=":container bg-black text-white scroll-auto ">
-            <div className="h-screen md:flex md:px-5">
-                <div className="bg-black self-center mx-auto flex-1">
-                    <img src={picture} className="h-48 w-48  md:h-80 md:w-80 rounded-full mx-auto" alt="Dov"/>
-                    <div className="mt-4">
-                        <h1 className="text-2xl font-bold">Renaud-Dov DEVERS</h1>
-                        <h2 className="text-lg font-light">{data.profession}</h2>
-                    </div>
-                    <div className="my-5">
-                        <a href={"https://api.bugbear.fr/cv/" + lang}
-                           className="rounded-full border-4 py-2 border-green-500 bg-green-500 hover:bg-green-700 hover:border-green-700 hover:text-white"
-                           target="_blank"
-                           rel="noreferrer noopener">
-                            <span className="text-xl font-bold ml-2">{data.cv_button}</span> <i
-                            className="fa-solid fa-arrow-up-right-from-square px-1 fa-lg"/>
-                        </a>
-                    </div>
-                    <Contact/>
-                </div>
+export class Me extends Component {
+    render() {
+        return (
+            <div className=":container z-0  bg-black text-white">
+                <div className=" md:flex flex-row md:px-5">
+                    <div className="left-0 sticky top-0 h-min md:flex-1">
 
-                <div className="md:flex-1 md:flex overflow-hidden w-full bg-black text-white ">
-                    <div className="md:flex-1 overflow-y-scroll">
+                        <img src={picture} className="h-48 w-48  md:h-80 md:w-80 rounded-full mx-auto" alt="Dov"/>
+                        <div className="mt-4">
+                            <h1 className="text-2xl font-bold">Renaud-Dov DEVERS</h1>
+                            <h2 className="text-lg font-light">{data.profession}</h2>
+                        </div>
+                        <div className="my-5">
+                            <a href={"https://api.bugbear.fr/cv/" + lang}
+                               className="rounded-full border-4 py-2 border-green-500 bg-green-500 hover:bg-green-700 hover:border-green-700 hover:text-white"
+                               target="_blank"
+                               rel="noreferrer noopener">
+                                <span className="text-xl font-bold ml-2">{data.cv_button}</span> <i
+                                className="fa-solid fa-arrow-up-right-from-square px-1 fa-lg"/>
+                            </a>
+                        </div>
+                        <Contact/>
+
+                    </div>
+
+                    <div className="md:flex-1  w-full bg-black text-white ">
+
                         <AboutMe/>
                         <Skills/>
 
@@ -109,8 +113,9 @@ export function Me(props) {
 
                     </div>
 
+
                 </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
