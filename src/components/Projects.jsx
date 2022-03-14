@@ -94,7 +94,7 @@ class ProjectItem extends Component {
             text_color = "text-white"
         }
         return (
-            <div className="relative h-28 hover:h-52 duration-200" onMouseEnter={this.handleHover}
+            <div className="relative h-28 hover:h-64 md:hover:h-52 duration-200" onMouseEnter={this.handleHover}
                  onMouseLeave={this.handleHover}>
                 {bg}
                 <div
