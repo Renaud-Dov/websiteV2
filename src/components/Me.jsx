@@ -3,7 +3,7 @@ import epita from "../img/EPITA_LOGO_INGENIEUR_CMJN.svg"
 import {Contact} from "./Contact";
 import {Footer} from "./Footer";
 import {Projects} from "./Projects";
-import {data, lang} from "../data";
+import {changeLang, data, lang} from "../data";
 import React, {Component} from "react";
 
 const skills =
@@ -81,40 +81,52 @@ function Skills() {
 export class Me extends Component {
     render() {
         return (
-            <div className=":container z-0  bg-black text-white">
-                <div className=" md:flex flex-row md:px-5">
-                    <div className="left-0 sticky top-0 h-min md:flex-1">
+            <div className="left-0 md:sticky md:top-0 h-min md:flex-1">
+                <button onClick={() => {
+                    changeLang();
+                    this.props.reference.setState({});
+                }}
+                        className="absolute z-1 flex ml-3 mt-3">
+                    <img src={data.change_lang} alt="change language"
+                         className="max-h-10 max-w-16  bg-green-500 p-0 m-0  rounded-xl"/>
 
-                        <img src={picture} className="h-48 w-48  md:h-80 md:w-80 rounded-full mx-auto" alt="Dov"/>
-                        <div className="mt-4">
-                            <h1 className="text-2xl font-bold">Renaud-Dov DEVERS</h1>
-                            <h2 className="text-lg font-light">{data.profession}</h2>
-                        </div>
-                        <div className="my-5">
-                            <a href={"https://api.bugbear.fr/cv/" + lang}
-                               className="rounded-full border-4 py-2 border-green-500 bg-green-500 hover:bg-green-700 hover:border-green-700 hover:text-white"
-                               target="_blank"
-                               rel="noreferrer noopener">
-                                <span className="text-xl font-bold ml-2">{data.cv_button}</span> <i
-                                className="fa-solid fa-arrow-up-right-from-square px-1 fa-lg"/>
-                            </a>
-                        </div>
-                        <Contact/>
-
+                </button>
+                <div className="pt-9">
+                    <img src={picture} className="h-48 w-48 md:h-80 md:w-80 rounded-full mx-auto" alt="Dov"/>
+                    <div className="mt-4">
+                        <h1 className="text-2xl font-bold">Renaud-Dov DEVERS</h1>
+                        <h2 className="text-lg font-light">{data.profession}</h2>
                     </div>
-
-                    <div className="md:flex-1  w-full bg-black text-white ">
-
-                        <AboutMe/>
-                        <Skills/>
-
-                        <Projects/>
-                        <Footer/>
-
+                    <div className="my-5">
+                        <a href={"https://api.bugbear.fr/cv/" + lang}
+                           className="rounded-full border-4 py-2 border-green-500 bg-green-500 hover:bg-green-700 hover:border-green-700 hover:text-white"
+                           target="_blank"
+                           rel="noreferrer noopener">
+                            <span className="text-xl font-bold ml-2">{data.cv_button}</span> <i
+                            className="fa-solid fa-arrow-up-right-from-square px-1 fa-lg"/>
+                        </a>
                     </div>
-
-
+                    <Contact/>
                 </div>
+
+
+            </div>
+
+        )
+    }
+}
+
+export class RightSide extends Component {
+    render() {
+        return (
+            <div className="md:flex-1  w-full bg-black text-white ">
+
+                <AboutMe/>
+                <Skills/>
+
+                <Projects/>
+                <Footer/>
+
             </div>
         )
     }
