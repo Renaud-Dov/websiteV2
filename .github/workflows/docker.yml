@@ -31,7 +31,3 @@ jobs:
           push: true
           tags: bugbeardov/website:latest
 
-      - name : Update the website
-        run: |
-          docker-composer ps
-          docker-compose up -d website
