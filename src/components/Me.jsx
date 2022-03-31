@@ -5,6 +5,7 @@ import {Footer} from "./Footer";
 import {Projects} from "./Projects";
 import {changeLang, data, lang} from "../data";
 import React, {Component} from "react";
+import {Studies} from "./Studies";
 
 const skills =
     [
@@ -14,10 +15,7 @@ const skills =
         {lang: "C", color: "green", "logo": "devicon-c-plain"},
         {lang: "C#", color: "green", "logo": "devicon-csharp-plain"},
         {lang: "C++", color: "green", "logo": "devicon-cplusplus-plain"},
-
         {lang: "Swift", color: "green", "logo": "devicon-swift-plain"},
-
-
     ]
 const tools = [
 
@@ -56,7 +54,7 @@ function AboutMe() {
 function Skills() {
     return <>
         <h1 className="text-4xl md:text-6xl font-Lato text-left text-green-500 ml-3 md:ml-0  font-bold pt-8">{data.skills}</h1>
-        <h1 className="text-xl font-Lato text-left text-green-500 ml-5 font-bold py-8">{data.languages}</h1>
+        <h2 className="text-xl font-Lato text-left text-green-500 ml-5 font-bold py-8">{data.languages}</h2>
         <div className="flex flex-wrap gap-4 ml-5">
             {skills.map((item, index) => (
                 <p key={index}
@@ -65,7 +63,7 @@ function Skills() {
                 </p>
             ))}
         </div>
-        <h1 className="text-xl font-Lato text-left text-green-500 ml-5 font-bold py-8">{data.framework}</h1>
+        <h2 className="text-xl font-Lato text-left text-green-500 ml-5 font-bold py-8">{data.framework}</h2>
         <div className="flex flex-wrap gap-4 ml-5">
             {tools.map((item, index) => (
                 <p key={index}
@@ -123,7 +121,7 @@ export class RightSide extends Component {
 
                 <AboutMe/>
                 <Skills/>
-
+                <Studies/>
                 <Projects/>
                 <Footer/>
 

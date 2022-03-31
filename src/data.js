@@ -14,7 +14,7 @@ export const data_raw =
             projects: "Projects",
             link_project: "Check this out",
             link_other_projects: "Check my other projects",
-
+            studies: "Studies"
         },
         fr: {
 
@@ -30,7 +30,7 @@ export const data_raw =
             projects: "Projets",
             link_project: "Voir ce projet",
             link_other_projects: "Voir mes autres projets",
-
+            studies: "Études",
         },
     }
 

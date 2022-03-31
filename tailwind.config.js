@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'my-Picture': "url('/src/dov.jpeg')",
+        "dot-pattern": "url('/src/img/White_dot.svg')" // https://upload.wikimedia.org/wikipedia/commons/d/da/White_dot.svg
       }
     },
     container: {
