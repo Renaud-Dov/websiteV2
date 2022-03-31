@@ -32,4 +32,6 @@ jobs:
           tags: bugbeardov/website:latest
 
       - name : Update the website
-        run: dc up -d website
+        run: |
+          docker-composer ps
+          docker-compose up -d website
