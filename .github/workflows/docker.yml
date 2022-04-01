@@ -38,6 +38,6 @@ jobs:
           known_hosts: "placeholder"
 
       - name: Update on server
-        run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -p {{ secrets.SSH_PORT }} "cd Projects; docker-compose up -d ${{ secrets.CONTAINER_NAME }}"
+        run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -p ${{ secrets.SSH_PORT }} "cd Projects; docker-compose up -d ${{ secrets.CONTAINER_NAME }}"
 
 
