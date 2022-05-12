@@ -1,10 +1,21 @@
-import React, {useState, Component} from 'react';
+import React, {Component} from 'react';
 import panic from "../img/panicAtTortuga.png";
+import discordSolana from "../img/discordSolana.jpg";
 import checkstudents from "../img/checkstudents.jpg";
 import websiteIcon from "../img/website.jpg";
 import websiteIcon2 from "../img/websitev2.jpg";
-import {data,lang} from "../data";
+import {data, lang} from "../data";
+
 const list = [
+    {
+        name: "Discord + Solana",
+        description: {
+            fr: "Differents bots Discord conçus pour intéragir avec les marchés d'NFT et la blockchain en général. Pour toute commande, n'hésitez pas à me contacter.",
+            en: "Different Discord bots made to interact with NFTs markets and the blockchain in general. For any order, do not hesitate to contact me."
+        },
+        picture: discordSolana,
+        tech: ["devicon-python-plain", "fa-brands fa-discord"]
+    },
     {
         name: 'Opticalloop OCR',
         description: {
@@ -106,10 +117,13 @@ class ProjectItem extends Component {
                         </div>
                         <div className={(this.state.isHovered ? 'visible ' : 'invisible ') + "absolute pt-8 px-4"}>
                             <p>{this.props.item.description[lang]}</p>
-                            <a href={this.props.item.link}
-                               className={text_color + " hover:underline  hover:decoration-2 pt-3"}>
-                                {this.props.item.picture !== undefined ? data.link_project : data.link_other_projects} <i className="fa-solid  fa-arrow-up-right-from-square px-1 md:fa-lg"/>
-                            </a>
+                            {(this.props.item.link !== undefined) &&
+                                <a href={this.props.item.link} target="_blank" rel="noreferrer noopener"
+                                   className={text_color + " hover:underline  hover:decoration-2 pt-3"}>
+                                    {this.props.item.picture !== undefined ? data.link_project : data.link_other_projects}
+                                    <i className="fa-solid  fa-arrow-up-right-from-square px-1 md:fa-lg"/>
+                                </a>
+                            }
                             <div className="flex flex-wrap  gap-4 pt-2 right-0">
                                 {this.props.item.tech.map((tech, index) => {
                                     return (
