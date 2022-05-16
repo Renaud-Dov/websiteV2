@@ -1,5 +1,5 @@
 import epita from "../img/EPITA_LOGO_INGENIEUR_CMJN.svg";
-import cabrini from "../img/cabrini.png";
+import cabrini from "../img/cabrini.webp";
 import {data, lang} from "../data";
 
 

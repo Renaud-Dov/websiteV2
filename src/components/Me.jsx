@@ -1,4 +1,4 @@
-import picture from "../img/dov.jpeg";
+import picture from "../img/dov.webp";
 import epita from "../img/EPITA_LOGO_INGENIEUR_CMJN.svg"
 import {Contact} from "./Contact";
 import {Footer} from "./Footer";

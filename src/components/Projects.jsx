@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import panic from "../img/panicAtTortuga.png";
-import discordSolana from "../img/discordSolana.jpg";
-import checkstudents from "../img/checkstudents.jpg";
-import websiteIcon from "../img/website.jpg";
-import opticalloop from "../img/opticalloop.png";
-import websiteIcon2 from "../img/websitev2.jpg";
+import panic from "../img/panicAtTortuga.webp";
+import discordSolana from "../img/discordSolana.webp";
+import checkstudents from "../img/checkstudents.webp";
+import websiteIcon from "../img/website.webp";
+import opticalloop from "../img/opticalloop.webp";
+import websiteIcon2 from "../img/websitev2.webp";
 import {data, lang} from "../data";
 
 const list = [
