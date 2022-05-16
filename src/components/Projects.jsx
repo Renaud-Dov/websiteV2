@@ -3,6 +3,7 @@ import panic from "../img/panicAtTortuga.png";
 import discordSolana from "../img/discordSolana.jpg";
 import checkstudents from "../img/checkstudents.jpg";
 import websiteIcon from "../img/website.jpg";
+import opticalloop from "../img/opticalloop.png";
 import websiteIcon2 from "../img/websitev2.jpg";
 import {data, lang} from "../data";
 
@@ -22,7 +23,7 @@ const list = [
             en: "Opticalloop is OCR application made in C to recognise and solve sudokus.",
             fr: "Opticalloop est une application écrite en C pour reconnaître et résoudre des sudokus.",
         },
-        picture: 'https://opticalloop.bugbear.fr/picture/our_project.gif',
+        picture: opticalloop,
         link: 'https://opticalloop.bugbear.fr/',
         tech: ["devicon-c-plain", "devicon-python-plain"]
     },
