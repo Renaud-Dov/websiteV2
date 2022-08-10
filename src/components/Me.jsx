@@ -96,7 +96,7 @@ export class Me extends Component {
                         <h2 className="text-lg font-light">{data.profession}</h2>
                     </div>
                     <div className="my-5">
-                        <a href={"https://api.bugbear.fr/cv/" + lang}
+                        <a href={`https://api.bugbear.fr/cv/${lang}.pdf`}
                            className="rounded-full border-4 py-2 border-green-500 bg-green-500 hover:bg-green-700 hover:border-green-700 hover:text-white"
                            target="_blank"
                            rel="noreferrer noopener">
