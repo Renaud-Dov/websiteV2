@@ -1,8 +1,6 @@
 import './App.css';
 import {Me, RightSide} from "./components/Me";
-import {changeLang, data} from "./data";
 import React, {Component} from "react";
-import {Studies} from "./components/Studies";
 
 class App extends Component {
     constructor(props) {

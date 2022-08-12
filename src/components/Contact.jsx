@@ -1,27 +1,30 @@
 import {Component} from "react";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import {faGithub, faLinkedin, faTwitter, faInstagram, faDiscord} from '@fortawesome/free-brands-svg-icons';
+
 
 const links = [
-    {name: "GitHub", url: "https://github.com/Renaud-Dov", icon: "fa-brands fa-github"},
-    {name: "LinkedIn", url: "https://www.linkedin.com/in/renaud-dov-devers/", icon: "fa-brands fa-linkedin"},
-    {name: "Twitter", url: "https://twitter.com/dov_chavers", icon: "fa-brands fa-twitter"},
-    {name: "Instagram", url: "https://www.instagram.com/dov_devers/", icon: "fa-brands fa-instagram"},
-    {name: "contact@bugbear.fr", url: "mailto:contact@bugbear.fr", icon: "fa-solid fa-envelope"},
-    {name: "BugBear#8715", icon: "fa-brands fa-discord"},
-
+    {name: "GitHub", url: "https://github.com/Renaud-Dov", icon: faGithub},
+    {name: "LinkedIn", url: "https://www.linkedin.com/in/renaud-dov-devers/", icon: faLinkedin},
+    {name: "Twitter", url: "https://twitter.com/dov_chavers", icon: faTwitter},
+    {name: "contact@bugbear.fr", url: "mailto:contact@bugbear.fr", icon: faEnvelope},
+    {name: "Instagram", url: "https://www.instagram.com/dov_devers/", icon: faInstagram},
+    {name: "BugBear#8715", icon: faDiscord},
 ]
 
 export class Contact extends Component {
     render() {
         return (
             <div className=":container bg-black text-white scroll-auto mx-auto">
-                <div className="flex flex-wrap ">
+                <div className="grid grid-cols-2 ">
                     {links.map((link, index) => (
                         (link.icon !== undefined) ?
                             <a href={link.url}
-                               className="text-left w-full w-1/6 md:w-1/2 p-4 text-green-500 hover:text-white"
+                               className="text-left w-full  p-4 text-green-500 hover:text-white"
                                target="_blank"
                                rel="noreferrer noopener" key={index}>
-                                <i className={`${link.icon} fa-2x`}/>
+                                <FontAwesomeIcon icon={link.icon} size="2x"/>
                                 <span className="text-xl ml-4 invisible md:visible">{link.name}</span>
                             </a> :
                             <div
@@ -31,8 +34,6 @@ export class Contact extends Component {
                                 <span className="text-xl ml-4 invisible md:visible">{link.name}</span>
                             </div>
                     ))}
-
-
                 </div>
             </div>
         )
