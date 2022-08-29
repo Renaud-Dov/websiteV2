@@ -6,6 +6,9 @@ import {Projects} from "./Projects";
 import {changeLang, data, lang} from "../data";
 import React, {Component} from "react";
 import {Studies} from "./Studies";
+import {faFlickr} from '@fortawesome/free-brands-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+
 
 const skills =
     [
@@ -44,8 +47,7 @@ function AboutMe() {
             href="https://flic.kr/ps/3YdDB4"
             className="rounded-full px-1 border-4 font-bold text-xl border-green-500 bg-green-500 hover:bg-green-700 hover:border-green-700 hover:text-white"
             target="_blank"
-            rel="noreferrer noopener">Flickr <i
-            className="fa-brands fa-flickr "/></a>.
+            rel="noreferrer noopener">Flickr <FontAwesomeIcon icon={faFlickr} /></a>.
 
         </p>
     </>;
