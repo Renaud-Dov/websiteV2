@@ -7,7 +7,7 @@ import {faGithub, faLinkedin, faTwitter, faInstagram, faDiscord} from '@fortawes
 const links = [
     {name: "GitHub", url: "https://github.com/Renaud-Dov", icon: faGithub},
     {name: "LinkedIn", url: "https://www.linkedin.com/in/renaud-dov-devers/", icon: faLinkedin},
-    {name: "Twitter", url: "https://twitter.com/dov_chavers", icon: faTwitter},
+    {name: "Twitter", url: "https://twitter.com/dov_devers", icon: faTwitter},
     {name: "contact@bugbear.fr", url: "mailto:contact@bugbear.fr", icon: faEnvelope},
     {name: "Instagram", url: "https://www.instagram.com/dov_devers/", icon: faInstagram},
     {name: "BugBear#8715", icon: faDiscord},
