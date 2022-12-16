@@ -3,11 +3,21 @@ import panic from "../img/panicAtTortuga.webp";
 import discordSolana from "../img/discordSolana.webp";
 import checkstudents from "../img/checkstudents.webp";
 import websiteIcon from "../img/website.webp";
+import hermes from "../img/hermes.webp";
 import opticalloop from "../img/opticalloop.webp";
 import websiteIcon2 from "../img/websitev2.webp";
 import {data, lang} from "../data";
-
 const list = [
+    {
+        name: "Hermès",
+        description: {
+            fr: "Bot discord utilisé par l'équipe d'assistants (ACDC) de l'EPITA pour gérer la création et le suivi des tickets par les étudiants.",
+            en: "Discord bot used by the EPITA assistants (ACDC) team to manage the creation and tracking of tickets by students."
+        },
+        picture: hermes,
+        tech: ["devicon-python-plain", "devicon-grafana-original"],
+        link: "https://github.com/Renaud-Dov/Hermes"
+    },
     {
         name: "Discord + Solana",
         description: {
