@@ -14,53 +14,53 @@ const skills =
     [
         {lang: "Python", color: "green", "logo": "devicon-python-plain"},
         {lang: "Node JS", color: "yellow", "logo": "devicon-nodejs-plain"},
-        {lang: "Rust", color: "green", "logo": "devicon-rust-plain"},
-        {lang: "C", color: "green", "logo": "devicon-c-plain"},
         {lang: "C#", color: "green", "logo": "devicon-csharp-plain"},
+        {lang: "C", color: "green", "logo": "devicon-c-plain"},
+        {lang: "Rust", color: "green", "logo": "devicon-rust-plain"},
         {lang: "C++", color: "green", "logo": "devicon-cplusplus-plain"},
         {lang: "Swift", color: "green", "logo": "devicon-swift-plain"},
     ]
 const tools = [
-
-    {lang: "Flask", color: "green", "logo": "devicon-flask-plain"},
+    {lang: "Docker", color: "green", "logo": "devicon-docker-plain"},
     {lang: "expressJS", color: "green", "logo": "devicon-express-original"},
     {lang: "Linux", color: "green", "logo": "devicon-linux-plain"},
     {lang: "Git", color: "green", "logo": "devicon-git-plain"},
+    {lang: "Flask", color: "green", "logo": "devicon-flask-plain"},
     {lang: "Firebase", color: "yellow", "logo": "devicon-firebase-plain"},
-    {lang: "Docker", color: "green", "logo": "devicon-docker-plain"},
     {lang: "Azure", color: "green", "logo": "devicon-azure-plain"},
-    {lang: "React", color: "green", "logo": "devicon-react-original"},
     {lang: "Electron", color: "green", "logo": "devicon-electron-original"},
     {lang: "Unity", color: "green", "logo": "devicon-unity-original"},
     {lang: "Matlab", color: "green", "logo": "devicon-matlab-plain"},
-
 ]
 
 
 function AboutMe() {
     return <>
-        <h1 className="text-4xl md:text-6xl font-Lato text-left text-green-500 font-bold ml-3 md:ml-0 md:mt-8 py-4">{data.about_me}</h1>
-        <p className="text-xl md:text-3xl break-normal  text-justify font-Lato md:text-left mx-5 leading-9 md:leading-10">
+        <h1 className="text-4xl md:text-5xl font-Lato text-left text-green-500 font-bold ml-3 md:ml-0 md:mt-8 py-4">{data.about_me}</h1>
+        <p className="text-xl md:text-2xl break-normal  text-justify font-Lato md:text-left mx-5 leading-9 md:leading-10">
             {data.about_me_text1} <a href="https://epita.fr"><img src={epita}
                                                                   className="h-14 w-14 fill-green-500 font-medium mx-auto inline-block"
                                                                   alt="Epita LOGO"/></a> {data.about_me_text2} <a
             href="https://flic.kr/ps/3YdDB4"
-            className="rounded-full px-1 border-4 font-bold text-xl border-green-500 bg-green-500 hover:bg-green-700 hover:border-green-700 hover:text-white"
+            className="break-normal rounded-full px-1 border-4 font-bold text-xl border-green-600 bg-green-600 hover:bg-green-700 hover:border-green-700 hover:text-white"
             target="_blank"
-            rel="noreferrer noopener">Flickr <FontAwesomeIcon icon={faFlickr} /></a>.
+            rel="noreferrer noopener">Flickr <FontAwesomeIcon icon={faFlickr}/></a>.
 
+        </p>
+        <p className="break-normal pt-4 italic text-justify font-Lato md:text-left mx-5 leading-2 md:leading-6">
+        {data.about_me_text3}
         </p>
     </>;
 }
 
 function Skills() {
     return <>
-        <h1 className="text-4xl md:text-6xl font-Lato text-left text-green-500 ml-3 md:ml-0  font-bold pt-8">{data.skills}</h1>
+        <h1 className="text-4xl md:text-5xl font-Lato text-left text-green-500 ml-3 md:ml-0  font-bold pt-8">{data.skills}</h1>
         <h2 className="text-xl font-Lato text-left text-green-500 ml-5 font-bold py-8">{data.languages}</h2>
         <div className="flex flex-wrap gap-4 ml-5">
             {skills.map((item, index) => (
                 <p key={index}
-                   className={`font-Lato hover:scale-110 duration-300 min-w-[10%] font-bold rounded-full bg-green-500 border-8 border-green-500`}>
+                   className={`font-Lato hover:scale-110 duration-300 min-w-[10%] font-bold rounded-full bg-green-600 border-8 border-green-600`}>
                     {item.lang} <i className={`${item.logo}`}/>
                 </p>
             ))}
@@ -69,7 +69,7 @@ function Skills() {
         <div className="flex flex-wrap gap-4 ml-5">
             {tools.map((item, index) => (
                 <p key={index}
-                   className={`font-Lato hover:scale-110 duration-300 min-w-[10%]  font-bold rounded-full bg-green-500 border-8 border-green-500`}>
+                   className={`font-Lato hover:scale-110 duration-300 min-w-[10%]  font-bold rounded-full bg-green-600 border-8 border-green-600`}>
                     {item.lang} <i className={`${item.logo} `}/>
                 </p>
 
@@ -99,7 +99,7 @@ export class Me extends Component {
                     </div>
                     <div className="my-5">
                         <a href={`https://api.bugbear.fr/cv/${lang}.pdf`}
-                           className="rounded-full border-4 py-2 border-green-500 bg-green-500 hover:bg-green-700 hover:border-green-700 hover:text-white"
+                           className="rounded-full border-4 py-2 border-green-600 bg-green-600 hover:bg-green-700 hover:border-green-700 hover:text-white"
                            target="_blank"
                            rel="noreferrer noopener">
                             <span className="text-xl font-bold ml-2">{data.cv_button}</span> <i

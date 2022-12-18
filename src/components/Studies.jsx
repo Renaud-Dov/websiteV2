@@ -31,7 +31,7 @@ const studies = [
 export function Studies() {
 
     return <>
-        <h1 className="text-4xl md:text-6xl font-Lato text-left text-green-500 ml-3 md:ml-0 font-bold py-8">{data.studies}</h1>
+        <h1 className="text-4xl md:text-5xl font-Lato text-left text-green-600 ml-3 md:ml-0 font-bold py-8">{data.studies}</h1>
         <ul className="ml-5">
             {studies.map((study, index) =>
                 <li key={study.name} className="flex">
@@ -45,9 +45,9 @@ export function Studies() {
                     <div className={(index === studies.length - 1 ? "" : "mb-10 ") + " ml-5"}>
                         <div className="flex flex-row items-center gap-0">
                             <span
-                                className="text-xl font-Lato text-left text-green-500 font-bold">{study.name}</span>
+                                className="text-xl font-Lato text-left text-green-600 font-bold">{study.name}</span>
                             <span
-                                className="bg-green-500 ml-3 p-1 rounded-full flex-none">{study.from} - {study.to}</span>
+                                className="bg-green-600 ml-3 p-1 rounded-full flex-none">{study.from} - {study.to}</span>
                         </div>
                         <span>{study.description[lang]}</span>
                     </div>

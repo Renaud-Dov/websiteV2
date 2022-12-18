@@ -9,10 +9,10 @@ import websiteIcon2 from "../img/websitev2.webp";
 import {data, lang} from "../data";
 const list = [
     {
-        name: "Hermès",
+        name: "Hermes",
         description: {
-            fr: "Bot discord utilisé par l'équipe d'assistants (ACDC) de l'EPITA pour gérer la création et le suivi des tickets par les étudiants.",
-            en: "Discord bot used by the EPITA assistants (ACDC) team to manage the creation and tracking of tickets by students."
+            fr: "Bot discord utilisé par l'équipe d'assistants (ACDC) de l'EPITA pour gérer la création et le suivi des tickets des étudiants.",
+            en: "Discord bot used by the EPITA assistants (ACDC) team to manage the creation and tracking of student tickets."
         },
         picture: hermes,
         tech: ["devicon-python-plain", "devicon-grafana-original"],
@@ -21,8 +21,8 @@ const list = [
     {
         name: "Discord + Solana",
         description: {
-            fr: "Differents bots Discord conçus pour intéragir avec les marchés d'NFT et la blockchain en général. Pour toute commande, n'hésitez pas à me contacter.",
-            en: "Different Discord bots made to interact with NFTs markets and the blockchain in general. For any order, do not hesitate to contact me."
+            fr: "Différents bots Discord conçus pour intéragir avec les marchés d'NFT et la blockchain en général.",
+            en: "Different Discord bots made to interact with NFTs markets and the blockchain in general."
         },
         picture: discordSolana,
         tech: ["devicon-python-plain", "fa-brands fa-discord"]
@@ -157,7 +157,7 @@ class ProjectItem extends Component {
 
 export function Projects() {
     return <>
-        <h1 className="text-4xl md:text-6xl font-Lato text-left text-green-500 ml-3 md:ml-0  font-bold py-8">{data.projects}</h1>
+        <h1 className="text-4xl md:text-5xl font-Lato text-left text-green-500 ml-3 md:ml-0  font-bold py-8">{data.projects}</h1>
         <div className="flex flex-col border-green-500  border-4 rounded-md">
             {list.map((item, index) => (
                 <ProjectItem key={index} item={item}/>
