@@ -88,7 +88,7 @@ export class Me extends Component {
                 }}
                         className="absolute z-1 flex ml-3 mt-3">
                     <img src={data.change_lang} alt="change language"
-                         className="max-h-10 max-w-16  bg-green-500 p-0 m-0  rounded-xl"/>
+                         className="w-16 h-16 p-0 m-0  rounded-full ring-green-500 ring-4"/>
 
                 </button>
                 <div className="pt-9">
