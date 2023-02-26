@@ -1,5 +1,6 @@
 import epita from "../img/EPITA_LOGO_INGENIEUR_CMJN.svg";
 import cabrini from "../img/cabrini.webp";
+import atu from "../img/atu.webp";
 import {data, lang} from "../data";
 
 
@@ -10,8 +11,17 @@ const studies = [
         to: 2025,
         logo: epita,
         description: {
-            en: "Master in Computer Science (Ongoing)",
-            fr: "Master en Informatique (En cours)",
+            fr: "1ème année en cycle ingénieur (En cours)",
+            en: "1st year of engineering cycle (ongoing)",
+        }
+    },
+    {
+        name: "ATU Sligo",
+        in: 2022,
+        logo: atu,
+        description: {
+            fr: "Semestre d'étude à l'étranger",
+            en: "Semester abroad",
         }
     },
     {
@@ -39,7 +49,7 @@ export function Studies() {
                     <div
                         className={(index === studies.length - 1 ? "" : "bg-dot-pattern") + " bg-repeat-y justify-center justify-items-start z-1 justify-self-center content-center place-content-center bg-center object-scale-down"}>
                         <img src={study.logo} alt={study.name}
-                             className="object-scale-down w-full w-16 h-16 mx-auto p-0.5  rounded-full bg-white border-green-500 border-4"/>
+                             className="object-scale-down w-full w-16 h-16 mx-auto  rounded-full bg-white border-green-500 border-4"/>
                     </div>
                     {/*description*/}
                     <div className={(index === studies.length - 1 ? "" : "mb-10 ") + " ml-5"}>
@@ -47,7 +57,7 @@ export function Studies() {
                             <span
                                 className="text-xl font-Lato text-left text-green-600 font-bold">{study.name}</span>
                             <span
-                                className="bg-green-600 ml-3 p-1 rounded-full flex-none">{study.from} - {study.to}</span>
+                                className="bg-green-600 ml-3 py-1 px-2 rounded-full flex-none">{study.in ? study.in : study.from + " - " + study.to}</span>
                         </div>
                         <span>{study.description[lang]}</span>
                     </div>
