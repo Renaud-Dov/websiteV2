@@ -48,7 +48,7 @@ function AboutMe() {
 
         </p>
         <p className="break-normal pt-4 italic text-justify font-Lato md:text-left mx-5 leading-2 md:leading-6">
-        {data.about_me_text3}
+            {data.about_me_text3}
         </p>
     </>;
 }
@@ -95,15 +95,13 @@ export class Me extends Component {
                     <img src={picture} className="h-48 w-48 md:h-80 md:w-80 rounded-full mx-auto" alt="Dov"/>
                     <div className="mt-4">
                         <h1 className="text-2xl font-bold">Renaud-Dov DEVERS</h1>
-                        <h2 className="text-lg font-light">{data.profession}</h2>
+                        <h2 className="text-lg">{data.profession}</h2>
                     </div>
                     <div className="my-5">
-                        <a href={`https://api.bugbear.fr/cv/${lang}.pdf`}
-                           className="rounded-full border-4 py-2 border-green-600 bg-green-600 hover:bg-green-700 hover:border-green-700 hover:text-white"
+                        <a href={`https://static.bugbear.fr/cv/${lang}.pdf`}
+                           className="rounded-full border-4 py-2 px-3 text-xl font-bold border-green-600 bg-green-600 hover:bg-green-700 hover:border-green-700 hover:text-white"
                            target="_blank"
-                           rel="noreferrer noopener">
-                            <span className="text-xl font-bold ml-2">{data.cv_button}</span> <i
-                            className="fa-solid fa-arrow-up-right-from-square px-1 fa-lg"/>
+                           rel="noreferrer noopener">{data.cv_button}
                         </a>
                     </div>
                     <Contact/>
