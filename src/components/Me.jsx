@@ -13,22 +13,25 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 const skills =
     [
         {lang: "Python", color: "green", "logo": "devicon-python-plain"},
-        {lang: "Node JS", color: "yellow", "logo": "devicon-nodejs-plain"},
         {lang: "C#", color: "green", "logo": "devicon-csharp-plain"},
-        {lang: "C", color: "green", "logo": "devicon-c-plain"},
+        {lang: "Java", color: "green", "logo": "devicon-java-plain"},
+        {lang: "C/C++", color: "green", "logo": "devicon-c-plain"},
+        {lang: "Node JS", color: "yellow", "logo": "devicon-nodejs-plain"},
         {lang: "Rust", color: "green", "logo": "devicon-rust-plain"},
-        {lang: "C++", color: "green", "logo": "devicon-cplusplus-plain"},
         {lang: "Swift", color: "green", "logo": "devicon-swift-plain"},
+        {lang: "OCaml", color: "green", "logo": "devicon-ocaml-plain"},
     ]
 const tools = [
-    {lang: "Docker", color: "green", "logo": "devicon-docker-plain"},
-    {lang: "expressJS", color: "green", "logo": "devicon-express-original"},
     {lang: "Linux", color: "green", "logo": "devicon-linux-plain"},
+    {lang: "Docker", color: "green", "logo": "devicon-docker-plain"},
     {lang: "Git", color: "green", "logo": "devicon-git-plain"},
+    {lang: 'PostgreSQL', color: "green", "logo": "devicon-postgresql-plain"},
+    {lang: "expressJS", color: "green", "logo": "devicon-express-original"},
     {lang: "Flask", color: "green", "logo": "devicon-flask-plain"},
     {lang: "Firebase", color: "yellow", "logo": "devicon-firebase-plain"},
     {lang: "Azure", color: "green", "logo": "devicon-azure-plain"},
-    {lang: "Electron", color: "green", "logo": "devicon-electron-original"},
+    {lang: "React", color: "green", "logo": "devicon-react-original"},
+    {lang: "Grafana", color: "green", "logo": "devicon-grafana-plain"},
     {lang: "Unity", color: "green", "logo": "devicon-unity-original"},
     {lang: "Matlab", color: "green", "logo": "devicon-matlab-plain"},
 ]
@@ -47,7 +50,7 @@ function AboutMe() {
             rel="noreferrer noopener">Flickr <FontAwesomeIcon icon={faFlickr}/></a>.
 
         </p>
-        <p className="break-normal pt-4 italic text-justify font-Lato md:text-left mx-5 leading-2 md:leading-6">
+        <p className="break-normal pt-4 text-xl italic font-bold text-justify font-Lato md:text-left mx-5 leading-2 md:leading-6">
             {data.about_me_text3}
         </p>
     </>;
