@@ -10,7 +10,7 @@ const links = [
     {name: "Twitter", url: "https://twitter.com/dov_devers", icon: faTwitter},
     {name: "contact@bugbear.fr", url: "mailto:contact@bugbear.fr", icon: faEnvelope},
     {name: "Instagram", url: "https://www.instagram.com/dov_devers/", icon: faInstagram},
-    {name: "BugBear#8715", url: "https://discord.com/users/208480161421721600", icon: faDiscord},
+    {name: "bugbear", url: "https://discord.com/users/208480161421721600", icon: faDiscord},
 ]
 
 export class Contact extends Component {
