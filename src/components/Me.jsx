@@ -50,9 +50,6 @@ function AboutMe() {
             rel="noreferrer noopener">Flickr <FontAwesomeIcon icon={faFlickr}/></a>.
 
         </p>
-        <p className="break-normal pt-4 text-xl italic font-bold text-justify font-Lato md:text-left mx-5 leading-2 md:leading-6">
-            {data.about_me_text3}
-        </p>
     </>;
 }
 
