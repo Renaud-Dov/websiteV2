@@ -11,7 +11,7 @@ const studies = [
         to: 2025,
         logo: epita,
         description: {
-            fr: "1ème année en cycle ingénieur (En cours)",
+            fr: "1ère année en cycle ingénieur (En cours)",
             en: "1st year of engineering cycle (ongoing)",
         }
     },
