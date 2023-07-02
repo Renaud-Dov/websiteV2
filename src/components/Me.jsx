@@ -61,7 +61,7 @@ function Skills() {
             {skills.map((item, index) => (
                 <p key={index}
                     className={`font-Lato hover:scale-110 duration-300 min-w-[10%] font-bold rounded-full bg-green-600 border-8 border-green-600`}>
-                    {item.lang} <i className={`${item.logo}`} />
+                    {item.name} <i className={`${item.logo}`} />
                 </p>
             ))}
         </div>
