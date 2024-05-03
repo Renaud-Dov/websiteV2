@@ -11,12 +11,12 @@ const list = [
     {
         name: "Hermes",
         description: {
-            fr: "Bot discord utilisé par l'équipe d'assistants (ACDC) de l'EPITA pour gérer la création et le suivi des tickets des étudiants.",
-            en: "Discord bot used by the EPITA assistants (ACDC) team to manage the creation and tracking of student tickets."
+            fr: "Système de gestion de tickets via Discord, utilisé par les équipes d'assistants du cycle prépatatoire de l'EPITA.",
+            en: "Ticket management system via Discord, used by the assistant teams of the preparatory cycle of EPITA."
         },
         picture: hermes,
-        tech: ["devicon-python-plain", "devicon-grafana-original"],
-        link: "https://github.com/Renaud-Dov/Hermes"
+        tech: ["devicon-java-plain","devicon-quarkus-plain", "devicon-grafana-original"],
+        link: "https://github.com/Renaud-Dov/hermes"
     },
     {
         name: "Discord + Solana",
@@ -60,8 +60,8 @@ const list = [
     {
         name: "Second Portfolio",
         description: {
-            en: "This portfolio is a website made with ReactJS and tailwindcss. It also host some pictures I took during my trips.",
-            fr: "Ce portfolio est un site web écrit avec ReactJS et tailwindcss. Il contient également des photos que j'ai pris durant mes voyages.",
+            en: "This portfolio is a website made with ReactJS and tailwindcss.",
+            fr: "Ce portfolio est un site web écrit avec ReactJS et tailwindcss.",
         },
         picture: websiteIcon2,
         link: "https://bugbear.fr/",
@@ -75,7 +75,6 @@ const list = [
         },
 
         picture: websiteIcon,
-        link: 'https://me.bugbear.fr/',
         tech: ["devicon-bootstrap-plain", "devicon-html5-plain", "devicon-css3-plain", "devicon-javascript-plain"]
     },
     {

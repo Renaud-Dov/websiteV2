@@ -11,14 +11,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const skills = [
-    { name: "Python", logo: "devicon-python-plain" },
     { name: "Java", logo: "devicon-java-plain" },
     { name: "C#", logo: "devicon-csharp-plain" },
     { name: "C", logo: "devicon-c-plain" },
+    { name: "Python", logo: "devicon-python-plain" },
     { name: "Node JS", logo: "devicon-nodejs-plain" },
-    { name: "C++", logo: "devicon-cplusplus-plain" },
     { name: "Rust", logo: "devicon-rust-plain" },
-    { name: "Swift", logo: "devicon-swift-plain" },
     { name: "OCaml", logo: "devicon-ocaml-plain" },
 ]
 const tools = [
@@ -30,9 +28,9 @@ const tools = [
     { name: "expressJS", logo: "devicon-express-original" },
     { name: "Flask", logo: "devicon-flask-plain" },
     { name: "Firebase", logo: "devicon-firebase-plain" },
+    { name: "React", logo: "devicon-react-original" },
     { name: "Azure", logo: "devicon-azure-plain" },
     { name: "Kafka", logo: "devicon-apachekafka-original" },
-    { name: "React", logo: "devicon-react-original" },
     { name: "Grafana", logo: "devicon-grafana-plain" },
 ]
 

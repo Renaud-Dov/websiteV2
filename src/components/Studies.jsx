@@ -11,8 +11,8 @@ const studies = [
         to: 2025,
         logo: epita,
         description: {
-            fr: "1ère année en cycle ingénieur (En cours)",
-            en: "1st year of engineering cycle (ongoing)",
+            fr: "2ème année en cycle ingénieur majeure systèmes embarqués (GISTRE)",
+            en: "2nd year in embedded systems major engineering cycle (GISTRE)",
         }
     },
     {
