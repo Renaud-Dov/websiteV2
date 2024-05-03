@@ -36,6 +36,8 @@ const tools = [
     { name: "Grafana", logo: "devicon-grafana-plain" },
 ]
 
+const cvLink = `https://s3.bugbear.fr/personal/public/cv/${lang}.pdf`;
+
 
 function AboutMe() {
     return <>
@@ -98,7 +100,7 @@ export class Me extends Component {
                         <h2 className="text-lg">{data.profession}</h2>
                     </div>
                     <div className="my-5">
-                        <a href={`https://static.bugbear.fr/cv/${lang}.pdf`}
+                        <a href={cvLink}
                             className="rounded-full border-4 py-2 px-3 text-xl font-bold border-green-600 bg-green-600 hover:bg-green-700 hover:border-green-700 hover:text-white"
                             target="_blank"
                             rel="noreferrer noopener">{data.cv_button}
