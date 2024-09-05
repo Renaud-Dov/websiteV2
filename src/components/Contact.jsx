@@ -19,20 +19,13 @@ export class Contact extends Component {
             <div className=":container bg-black text-white scroll-auto mx-auto">
                 <div className="grid grid-cols-2 ">
                     {links.map((link, index) => (
-                        (link.icon !== undefined) ?
-                            <a href={link.url}
-                               className="text-left w-full  p-4 text-green-500 hover:text-white"
-                               target="_blank"
-                               rel="noreferrer noopener" key={index}>
-                                <FontAwesomeIcon icon={link.icon} size="2x"/>
-                                <span className="text-xl ml-4 invisible md:visible">{link.name}</span>
-                            </a> :
-                            <div
-                                className="text-left w-full w-1/6 md:w-1/2 p-4 text-green-500 hover:text-white"
-                                key={index}>
-                                <i className={`${link.icon} fa-2x`}/>
-                                <span className="text-xl ml-4 invisible md:visible">{link.name}</span>
-                            </div>
+                        <a href={link.url}
+                           className="text-left w-full  p-4 text-green-500 hover:text-white flex flex-row items-center gap-4"
+                           target="_blank"
+                           rel="noreferrer noopener" key={index}>
+                            <FontAwesomeIcon icon={link.icon} size="2x" />
+                            <span className="text-xl ml-4  md:visible">{link.name}</span>
+                        </a>
                     ))}
                 </div>
             </div>

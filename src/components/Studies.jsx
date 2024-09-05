@@ -11,8 +11,8 @@ const studies = [
         to: 2025,
         logo: epita,
         description: {
-            fr: "2ème année en cycle ingénieur majeure systèmes embarqués (GISTRE)",
-            en: "2nd year in embedded systems major engineering cycle (GISTRE)",
+            fr: "3ème année en cycle ingénieur majeure systèmes embarqués spécialisation Plateforme Ouverte",
+            en: "3rd year in engineering cycle majoring in embedded systems specialising in Open Platform",
         }
     },
     {
@@ -44,12 +44,12 @@ export function Studies() {
         <h1 className="text-4xl md:text-5xl font-Lato text-left text-green-600 ml-3 md:ml-0 font-bold py-8">{data.studies}</h1>
         <ul className="ml-5 flex flex-col">
             {studies.map((study, index) =>
-                <li key={study.name} className="flex">
+                <li key={study.name} className="flex ">
                     {/*picture*/}
                     <div
-                        className={(index === studies.length - 1 ? "" : "bg-dot-pattern") + " w-16 bg-repeat-y justify-center justify-items-start z-1 justify-self-center content-center place-content-center bg-center object-scale-down"}>
+                        className={(index === 0 || index === studies.length - 1 ? "" : "bg-dot-pattern") + " w-16 bg-repeat-y justify-center justify-items-start z-1 justify-self-center content-center place-content-center bg-center"}>
                         <img src={study.logo} alt={study.name}
-                             className="object-scale-down w-16 h-16 rounded-full bg-white border-green-500 border-4"/>
+                             className="object-contain w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white border-green-500 border-4"/>
                     </div>
                     {/*description*/}
                     <div className={(index === studies.length - 1 ? "" : "mb-10 ") + " ml-5"}>

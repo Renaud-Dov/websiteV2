@@ -6,8 +6,29 @@ import websiteIcon from "../img/website.webp";
 import hermes from "../img/hermes.webp";
 import opticalloop from "../img/opticalloop.webp";
 import websiteIcon2 from "../img/websitev2.webp";
+import forge from "../img/forge.webp";
+import epimac from "../img/epimac_full.svg";
 import {data, lang} from "../data";
+
 const list = [
+    {
+        name: "Intranet Epita Forge",
+        description: {
+            fr: "Développement du nouvel SI de l'EPITA, utilisé par les étudiants et les professeurs, reliant tous les services de l'école.",
+            en: "Development of the new central information system of EPITA, used by students and teachers, connecting all the school's services."
+        },
+        picture: forge,
+        tech: ["devicon-java-plain text-2xl","devicon-quarkus-plain","devicon-postgresql-plain","devicon-react-original","devicon-kubernetes-plain", "devicon-apachekafka-original","devicon-amazonwebservices-plain-wordmark"],
+    },
+    {
+        name: "Intranet EpiMac",
+        description: {
+            fr: "Redéveloppement complet de l'intranet de l'association EpiMac, utilisé par les étudiants de l'Epita/Epitech, leur permettant d'avoir accès a l'Apple Developer Program pendant leur scolarité.",
+            en: "Complete redevelopment of the EpiMac association intranet, used by students of Epita/Epitech, allowing them to access the Apple Developer Program during their studies."
+        },
+        picture: epimac,
+        tech: ["devicon-java-plain text-2xl","devicon-quarkus-plain","devicon-postgresql-plain","devicon-react-original", "devicon-rabbitmq-original"],
+    },
     {
         name: "Hermes",
         description: {
@@ -15,7 +36,7 @@ const list = [
             en: "Ticket management system via Discord, used by the assistant teams of the preparatory cycle of EPITA."
         },
         picture: hermes,
-        tech: ["devicon-java-plain","devicon-quarkus-plain", "devicon-grafana-original"],
+        tech: ["devicon-java-plain text-2xl","devicon-quarkus-plain", "devicon-postgresql-plain","devicon-grafana-original"],
         link: "https://github.com/Renaud-Dov/hermes"
     },
     {
@@ -65,7 +86,7 @@ const list = [
         },
         picture: websiteIcon2,
         link: "https://bugbear.fr/",
-        tech: ["devicon-nodejs-plain", "devicon-react-original", "devicon-tailwindcss-plain"]
+        tech: ["devicon-nodejs-plain-wordmark", "devicon-react-original", "devicon-tailwindcss-plain"]
     },
     {
         name: 'First Portfolio',
