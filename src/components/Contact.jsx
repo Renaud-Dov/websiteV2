@@ -1,15 +1,14 @@
 import {Component} from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
-import {faGithub, faLinkedin, faTwitter, faInstagram, faDiscord} from '@fortawesome/free-brands-svg-icons';
+import {faGithub, faLinkedin, faTwitter, faInstagram, faDiscord, faGitlab} from '@fortawesome/free-brands-svg-icons';
 
 
 const links = [
     {name: "GitHub", url: "https://github.com/Renaud-Dov", icon: faGithub},
     {name: "LinkedIn", url: "https://www.linkedin.com/in/renaud-dov-devers/", icon: faLinkedin},
-    {name: "Twitter", url: "https://twitter.com/dov_devers", icon: faTwitter},
+    {name: "Gitlab", url: "https://gitlab.com/dov_bugbear", icon: faGitlab},
     {name: "contact@bugbear.fr", url: "mailto:contact@bugbear.fr", icon: faEnvelope},
-    {name: "Instagram", url: "https://www.instagram.com/dov_devers/", icon: faInstagram},
     {name: "bugbear", url: "https://discord.com/users/208480161421721600", icon: faDiscord},
 ]
 

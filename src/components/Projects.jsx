@@ -18,7 +18,7 @@ const list = [
             en: "Development of the new central information system of EPITA, used by students and teachers, connecting all the school's services."
         },
         picture: forge,
-        tech: ["devicon-java-plain text-2xl","devicon-quarkus-plain","devicon-postgresql-plain","devicon-react-original","devicon-kubernetes-plain", "devicon-apachekafka-original","devicon-amazonwebservices-plain-wordmark"],
+        tech: ["devicon-java-plain text-2xl", "devicon-quarkus-plain", "devicon-postgresql-plain", "devicon-react-original", "devicon-kubernetes-plain", "devicon-apachekafka-original", "devicon-amazonwebservices-plain-wordmark"],
     },
     {
         name: "Intranet EpiMac",
@@ -27,7 +27,16 @@ const list = [
             en: "Complete redevelopment of the EpiMac association intranet, used by students of Epita/Epitech, allowing them to access the Apple Developer Program during their studies."
         },
         picture: epimac,
-        tech: ["devicon-java-plain text-2xl","devicon-quarkus-plain","devicon-postgresql-plain","devicon-react-original", "devicon-rabbitmq-original"],
+        tech: ["devicon-java-plain text-2xl", "devicon-quarkus-plain", "devicon-postgresql-plain", "devicon-react-original", "devicon-rabbitmq-original"],
+    },
+    {
+        name: "Infrastructure",
+        description: {
+            fr: "Déploiement de mon infrastructure personnelle, utilisant Kubernetes, ArgoCD, Ansible, Terraform, et d'autres outils.",
+            en: "Deployment of my personal infrastructure, using Kubernetes, ArgoCD, Ansible, Terraform, and other tools."
+        },
+        link: "https://gitlab.com/dov_bugbear/infrastructure",
+        tech: ["devicon-kubernetes-plain", "devicon-ansible-plain", "devicon-terraform-plain", "devicon-docker-plain", "devicon-argocd-plain", "devicon-vault-original"],
     },
     {
         name: "Hermes",
@@ -36,7 +45,7 @@ const list = [
             en: "Ticket management system via Discord, used by the assistant teams of the preparatory cycle of EPITA."
         },
         picture: hermes,
-        tech: ["devicon-java-plain text-2xl","devicon-quarkus-plain", "devicon-postgresql-plain","devicon-grafana-original"],
+        tech: ["devicon-java-plain text-2xl", "devicon-quarkus-plain", "devicon-postgresql-plain", "devicon-grafana-original"],
         link: "https://github.com/Renaud-Dov/hermes"
     },
     {
@@ -105,6 +114,7 @@ const list = [
             fr: "Voici quelques autres projets que j'ai réalisé durant mes études."
         },
         link: "https://github.com/Renaud-Dov?tab=repositories",
+        print_link_other_projects: true,
         tech: []
     }
 ]
@@ -151,12 +161,12 @@ class ProjectItem extends Component {
                             {(this.props.item.link !== undefined) &&
                                 <a href={this.props.item.link} target="_blank" rel="noreferrer noopener"
                                    className={text_color + " hover:underline  hover:decoration-2 pt-3"}>
-                                    {this.props.item.picture !== undefined ? data.link_project : data.link_other_projects}
+                                    {this.props.item.print_link_other_projects ? data.link_other_projects : data.link_project}
                                     <i className="fa-solid  fa-arrow-up-right-from-square px-1 md:fa-lg"/>
                                 </a>
                             }
                             <div className="flex flex-wrap  gap-4 pt-2 right-0">
-                                {this.props.item.tech.map((tech, index) => {
+                                {this.props.item.tech && this.props.item.tech.map((tech, index) => {
                                     return (
                                         <div key={index} className="flex flex-row items-center">
                                             <i className={tech}/>
